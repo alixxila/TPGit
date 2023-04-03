@@ -1,44 +1,27 @@
 function VerifFormulaire()                                    
 { 
-    var name = document.forms["RegForm"]["Nom"];               
-    var email = document.forms["RegForm"]["Email"];      
-    var what =  document.forms["RegForm"]["Message"];  
+    var form = document.forms["RegForm"]; 
+    var name = form["Nom"];                
+    var email = form["Email"];      
+    var what =  form["Message"];  
 
-    if (name.value == "")                                  
-    { 
+    if (name.value == "") { 
         alert("Mettez votre nom."); 
         name.focus(); 
         return false; 
     }         
-    if (email.value == "")                                   
-    { 
+    
+    if (!/\S+@\S+\.\S+/.test(email.value)) { 
         alert("Mettez une adresse email valide."); 
         email.focus(); 
         return false; 
     }    
-    if (email.value.indexOf("@", 0) < 0)                 
-    { 
-        alert("Mettez une adresse email valide."); 
-        email.focus(); 
-        return false; 
-    }    
-    if (email.value.indexOf(".", 0) < 0)                 
-    { 
-        alert("Mettez une adresse email valide."); 
-        email.focus(); 
-        return false; 
-    }     
-    if (password.value == "")                        
-    { 
-        alert("Saisissez votre mot de passe"); 
-        password.focus(); 
-        return false; 
-    }    
-    if (what.selectedIndex < 1)                  
-    { 
+    
+    if (what.selectedIndex < 1) { 
         alert("Mettez votre cours."); 
         what.focus(); 
         return false; 
     } 
+    
     return true; 
 }
