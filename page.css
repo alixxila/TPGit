@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-image: url('https://www.cerema.fr/sites/default/files/styles/uas_medium/public/media/images/2019/07/tree-189852_1920.jpg?itok=Ipz2Er5w');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 form {
@@ -15,7 +18,9 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -31,9 +36,3 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
-
-body {
-    background-image: url('https://www.cerema.fr/sites/default/files/styles/uas_medium/public/media/images/2019/07/tree-189852_1920.jpg?itok=Ipz2Er5w');
-    background-size: cover;
-    background-repeat: no-repeat;
-}  
