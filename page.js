@@ -1,6 +1,7 @@
-function showAlert() {
-  alert("Ceci est une alerte");
-}
-
-var button = document.getElementById("myButton");
-button.addEventListener("click", showAlert);
+function showAlert(event) {
+          event.preventDefault();
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+          alert("Nom: " + name + "\nEmail: " + email + "\nMessage: " + message);
+        };
