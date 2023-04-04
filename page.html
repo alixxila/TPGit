@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="page.js"></script>
     <script src="formulairevalidation.js"></script>
+    <script src="heure.js"></script>
     <link rel="stylesheet" type="text/css" href="page.css">
     <title>Document</title>
 </head>
@@ -24,6 +25,30 @@
       
         <input type="submit" value="Envoyer">
     </form>
+
+    <p>Nous sommes le <span id="datetime"></span></p>
+
+    <script>
+
+		// Récupérer la date et l'heure actuelles
+		var now = new Date();
+
+		// Obtenir les éléments de la date et de l'heure
+		var year = now.getFullYear();
+		var month = now.getMonth() + 1;
+		var day = now.getDate();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+
+		// Formatage de la date et de l'heure
+		var datetime = day + "/" + month + "/" + year + " " + hours + ":" + minutes + ":" + seconds;
+
+		// Afficher la date et l'heure dans l'élément HTML correspondant
+		document.getElementById("datetime").innerHTML = datetime;
+	
+    </script>
+
 </body>
 </html>
 
