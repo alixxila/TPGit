@@ -31,3 +31,9 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
+body {
+    background-image: url('https://www.cerema.fr/sites/default/files/styles/uas_medium/public/media/images/2019/07/tree-189852_1920.jpg?itok=Ipz2Er5w');
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
